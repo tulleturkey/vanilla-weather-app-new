@@ -59,3 +59,13 @@ margin-top: -40px;
   display: block;
   text-align: center;
 }
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
