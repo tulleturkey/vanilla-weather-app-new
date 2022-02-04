@@ -13,6 +13,36 @@ minutes = `0${minutes}`;
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+  forecastHTML = forecastHTML + 
+`
+  <div class="col-2">
+    <div class="weather-forecast-date">
+    ${day}
+    </div>
+<img src="https://openweathermap.org/img/wn/04n@2x.png" alt="" width="50" />
+<div class="weather-forecast-temperature">
+  <span class="weather-forecast-max">
+30°
+</span>
+ <span class="weather-forecast-min">
+ 24°
+ </span>
+</div>
+  </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+
+};
+
+
 function displayTemperature(response) {
   console.log(response.data);
 let temperatureElement = document.querySelector("#temperature");
@@ -70,6 +100,7 @@ function showCelsiusTemperature(event) {
 }
 
 search("Singapore");
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
