@@ -1,9 +1,11 @@
+
 .wrapper {
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
   border: 1px solid #705f72;
   border-radius: 5px;
+  background-color: rgb(185, 216, 206);
 }
 
 h1 {
@@ -34,6 +36,7 @@ li {
 li#description {
 text-transform: capitalize;
 }
+
 
 
 .weather-temperature img {
